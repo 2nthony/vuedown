@@ -23,7 +23,7 @@ yarn add vuedown --dev
 
 Previously you can use the `.md` file like `.html`:
 
-```md
+```markdown
 # Hello
 
 > I'm a markdown file
@@ -33,7 +33,7 @@ Previously you can use the `.md` file like `.html`:
 
 Now with `vuedown` you can use the `.md` file like `.vue`:
 
-```md
+```markdown
 # {{ title }}
 
 > I'm a markdown file
