@@ -1,37 +1,29 @@
 # vuedown
 
-> 📝Your Markdown is your Vue SFC.
+> 📝Your Markdown is your Vue-Component.
 
-[![NPM version](https://badgen.net/npm/v/vuedown)](https://npmjs.com/package/vuedown)
-[![NPM download](https://badgen.net/npm/dm/vuedown)](https://npmjs.com/package/vuedown)
-![NPM License](https://badgen.net/npm/license/vuedown)
-[![buy me a coffee](https://badgen.net/badge/buy%20me%20a/coffee/a71)](https://patreon.com/evillt)
+Please consider starring the project to show your ❤️ and support.
 
-## Features
+[![NPM version](https://badgen.net/npm/v/vuedown?icon=npm)](https://npmjs.com/package/vuedown)
+[![NPM download](https://badgen.net/npm/dm/vuedown?icon=npm)](https://npmjs.com/package/vuedown)
+[![CircleCI](https://badgen.net/circleci/github/evillt/vuedown?icon=circleci)](https://circleci.com/gh/evillt/vuedown/tree/master)
+[![License](https://badgen.net/npm/license/vuedown)](./LICENSE)
+[![donate](https://badgen.net/badge/support%20me/donate/f2a)](https://donate.evila.me)
 
-- Use most Vue SFC features in markdown files
+## Table of Contents
 
-Combine `vue-loader` and `vuedown/loader` to make it come to reality.
+- [Usage](#Usage)
+- [Use with bundlers](#Use-with-bundlers)
 
 ## Install
 
-```sh
+```console
 yarn add vuedown --dev
 ```
 
-## Example
+## Usage
 
-Previously you can use the `.md` file like `.html`:
-
-```markdown
-# Hello
-
-> I'm a markdown file
-
-<button>button</button>
-```
-
-Now with `vuedown` you can use the `.md` file like `.vue`:
+In:
 
 ```markdown
 # {{ title }}
@@ -57,9 +49,46 @@ export default {
 </script>
 ```
 
-## How to use
+Out:
 
-### Use with webpack
+```html
+<template>
+  <div class="vuedown">
+    <h1>{{ title }}</h1>
+    <blockquote>I'm a markdown file</blockquote>
+    <button @click="inc">Count: {{ count }}</button>
+  </div>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        title: 'Hello',
+        count: 0
+      }
+    },
+    methods: {
+      inc() {
+        this.count++
+      }
+    }
+  }
+</script>
+```
+
+Code:
+
+```js
+const component = vuedown(source)
+// Get the component in Vue SFC format
+```
+
+## Use with bundlers
+
+Combine `vue-loader` and `vuedown/loader` to use most Vue-Component features in markdown files
+
+In your `webpack.config.js`:
 
 ```js
 module.exports = {
@@ -79,7 +108,44 @@ module.exports = {
 }
 ```
 
-That's it, [all the goodies](https://vue-loader.vuejs.org/) of `.vue` SFC is available in your `.md` files now!
+Or in `{vue,poi}.config.js`:
+
+```js
+module.exports = {
+  chainWebpack(config) {
+    config.module
+      .rule('vuedown')
+      .test(/\.md$/)
+      .use('vue-loader')
+      .loader('vue-loader')
+      .end()
+      .use('vuedown-loader')
+      .loader('vuedown/loader')
+  }
+}
+```
+
+## API
+
+`vuedown(source, options)`
+
+### `source`
+
+- Type: `string`
+- Required: `true`
+
+Markdown string.
+
+### `options`
+
+Options for [marked.options](https://marked.js.org/#/USING_ADVANCED.md#options).
+
+### `options.routerLink`
+
+- Type: `boolean`
+- Default: `true`
+
+Convert `<a>` to `<router-link>` but external link will always be `<a target="_blank">`.
 
 ## Contributing
 
@@ -95,4 +161,4 @@ That's it, [all the goodies](https://vue-loader.vuejs.org/) of `.vue` SFC is ava
 
 Authored and maintained by **EVILLT** with help from contributors ([list](https://github.com/evillt/vuedown/contributors)).
 
-> [github.com/evillt](https://github.com/evillt) · GitHub [@evillt](https://github.com/evillt) · Twitter [@evillt](https://twitter.com/evillt)
+> [evila.me](https://evila.me) · GitHub [@evillt](https://github.com/evillt) · Twitter [@evillt](https://twitter.com/evillt)
