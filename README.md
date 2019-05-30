@@ -21,6 +21,10 @@ Please consider starring the project to show your ❤️ and support.
 yarn add vuedown --dev
 ```
 
+## Features
+
+- Support `@` in attribute names
+
 ## Usage
 
 In:
