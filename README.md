@@ -33,19 +33,19 @@ In:
 <button @click="inc">Count: {{ count }}</button>
 
 <script>
-export default {
-  data() {
-    return {
-      title: 'Hello',
-      count: 0
-    }
-  },
-  methods: {
-    inc() {
-      this.count++
+  export default {
+    data() {
+      return {
+        title: 'Hello',
+        count: 0
+      }
+    },
+    methods: {
+      inc() {
+        this.count++
+      }
     }
   }
-}
 </script>
 ```
 
@@ -55,8 +55,14 @@ Out:
 <template>
   <div class="vuedown">
     <h1>{{ title }}</h1>
-    <blockquote>I'm a markdown file</blockquote>
-    <button @click="inc">Count: {{ count }}</button>
+    
+    <p>
+      <blockquote>I'm a markdown file</blockquote>
+    </p>
+  
+    <p>
+      <button @click="inc">Count: {{ count }}</button>
+    </p>
   </div>
 </template>
 
