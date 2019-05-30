@@ -30,7 +30,7 @@ In:
 
 > I'm a markdown file
 
-<button v-on:click="inc">Count: {{ count }}</button>
+<button @click="inc">Count: {{ count }}</button>
 
 <script>
 export default {
@@ -56,7 +56,7 @@ Out:
   <div class="vuedown">
     <h1>{{ title }}</h1>
     <blockquote>I'm a markdown file</blockquote>
-    <button v-on:click="inc">Count: {{ count }}</button>
+    <button @click="inc">Count: {{ count }}</button>
   </div>
 </template>
 
