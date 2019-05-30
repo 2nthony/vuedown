@@ -147,6 +147,11 @@ Options for [marked.options](https://marked.js.org/#/USING_ADVANCED.md#options).
 
 Convert `<a>` to `<router-link>` but external link will always be `<a target="_blank">`.
 
+### `options.wrapHTML`
+
+- Type: `(html: string, markdownSource: string) => string`
+- Default: <code>html => &#x60;&lt;div class="vuedown"&gt;\${html}&lt;/div&gt;&#x60;</code>
+
 ## Contributing
 
 1. Fork it!
