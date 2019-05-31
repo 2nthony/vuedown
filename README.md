@@ -60,11 +60,11 @@ Out:
 <template>
   <div class="vuedown">
     <h1>{{ title }}</h1>
-    
+
     <p>
       <blockquote>I'm a markdown file</blockquote>
     </p>
-  
+
     <p>
       <button @click="inc">Count: {{ count }}</button>
     </p>
@@ -138,30 +138,36 @@ module.exports = {
 
 ## API
 
-`vuedown(source, options)`
+### `vuedown(source, options)`
 
-### `source`
+#### `source`
 
 - Type: `string`
 - Required: `true`
 
 Markdown string.
 
-### `options`
+#### `options`
 
 Options for [marked.options](https://marked.js.org/#/USING_ADVANCED.md#options).
 
-### `options.routerLink`
+#### `options.routerLink`
 
 - Type: `boolean`
 - Default: `true`
 
 Convert `<a>` to `<router-link>` but external link will always be `<a target="_blank">`.
 
-### `options.wrapHTML`
+#### `options.wrapHTML`
 
 - Type: `(html: string, markdownSource: string) => string`
 - Default: <code>html => &#x60;&lt;div class="vuedown"&gt;\${html}&lt;/div&gt;&#x60;</code>
+
+Wrap the HTML in an element.
+
+### `vuedown.marked: marked`
+
+[marked](https://marked.js.org)
 
 ## Contributing
 
