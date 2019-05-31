@@ -24,6 +24,7 @@ yarn add vuedown --dev
 ## Features
 
 - Support `@` in attribute names
+- Convert link to `<router-link>` by default
 
 ## Usage
 
