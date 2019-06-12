@@ -15,16 +15,16 @@ Please consider starring the project to show your ❤️ and support.
 - [Usage](#Usage)
 - [Use with bundlers](#Use-with-bundlers)
 
+## Features
+
+- Support `@` in attribute names
+- Convert link to `<router-link>` by default
+
 ## Install
 
 ```console
 yarn add vuedown --dev
 ```
-
-## Features
-
-- Support `@` in attribute names
-- Convert link to `<router-link>` by default
 
 ## Usage
 
