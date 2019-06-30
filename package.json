@@ -41,11 +41,9 @@
       "plugin:prettier/recommended"
     ],
     "rules": {
-      "unicorn/filename-case": false
-    },
-    "ignores": [
-      "lib/markdown/marked.js"
-    ]
+      "unicorn/filename-case": "off",
+      "unicorn/no-abusive-eslint-disable": "off"
+    }
   },
   "husky": {
     "hooks": {
