@@ -1,6 +1,6 @@
 # vuedown
 
-> 📝Your Markdown is your Vue-Component.
+> 📝Use most Vue-component features in markdown files
 
 Please consider starring the project to show your ❤️ and support.
 
@@ -18,7 +18,8 @@ Please consider starring the project to show your ❤️ and support.
 ## Features
 
 - Support `@` in attribute names
-- Convert link to `<router-link>` by default
+- ~~Convert link to `<router-link>` by default~~
+- Support convert `<a>` to `<router-link>`
 
 ## Install
 
@@ -91,7 +92,7 @@ Out:
 Code:
 
 ```js
-const component = vuedown(source)
+const component = vuedown(input)
 // Get the component in Vue SFC format
 ```
 
@@ -138,14 +139,14 @@ module.exports = {
 
 ## API
 
-### `vuedown(source, options)`
+### `vuedown(input, [options])`
 
-#### `source`
+#### `input`
 
 - Type: `string`
 - Required: `true`
 
-Markdown string.
+The markdown string.
 
 #### `options`
 
@@ -154,13 +155,13 @@ Options for [marked.options](https://marked.js.org/#/USING_ADVANCED.md#options).
 #### `options.routerLink`
 
 - Type: `boolean`
-- Default: `true`
+- Default: `false`
 
 Convert `<a>` to `<router-link>` but external link will always be `<a target="_blank">`.
 
 #### `options.wrapHTML`
 
-- Type: `(html: string, markdownSource: string) => string`
+- Type: `(html: string) => string`
 - Default: <code>html => &#x60;&lt;div class="vuedown"&gt;\${html}&lt;/div&gt;&#x60;</code>
 
 Wrap the HTML in an element.
