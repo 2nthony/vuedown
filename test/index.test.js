@@ -1,5 +1,5 @@
 import test from 'ava'
-import vuedown from '../'
+import vuedown from '..'
 
 function snapshot(title, text, options) {
   test(title, t => {
