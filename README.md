@@ -98,6 +98,8 @@ const component = vuedown(input)
 
 ## Use with bundlers
 
+### Webpack
+
 Combine `vue-loader` and `vuedown/loader` to use most Vue-Component features in markdown files
 
 In your `webpack.config.js`:
@@ -136,6 +138,10 @@ module.exports = {
   }
 }
 ```
+
+### Parcel
+
+TODO
 
 ## API
 
