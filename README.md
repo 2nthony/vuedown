@@ -1,8 +1,10 @@
 # vuedown
 
-> 📝Use most Vue-component features in markdown files
+> 📝Convert markdown to Vue-component
 
 Please consider starring the project to show your ❤️ and support.
+
+**You can use the [vuedown-loader](https://github.com/evillt/vuedown-loader) for webpack loader**
 
 [![NPM version](https://badgen.net/npm/v/vuedown?icon=npm)](https://npmjs.com/package/vuedown)
 [![NPM download](https://badgen.net/npm/dm/vuedown?icon=npm)](https://npmjs.com/package/vuedown)
@@ -10,16 +12,12 @@ Please consider starring the project to show your ❤️ and support.
 [![License](https://badgen.net/npm/license/vuedown)](./LICENSE)
 [![donate](https://badgen.net/badge/support%20me/donate/f2a)](https://donate.evila.me)
 
-## Table of Contents
-
-- [Usage](#Usage)
-- [Use with bundlers](#Use-with-bundlers)
-
 ## Features
 
 - Support `@` in attribute names
 - ~~Convert link to `<router-link>` by default~~
 - Support convert `<a>` to `<router-link>`
+- Mini size
 
 ## Install
 
@@ -95,53 +93,6 @@ Code:
 const component = vuedown(input)
 // Get the component in Vue SFC format
 ```
-
-## Use with bundlers
-
-### Webpack
-
-Combine `vue-loader` and `vuedown/loader` to use most Vue-Component features in markdown files
-
-In your `webpack.config.js`:
-
-```js
-module.exports = {
-  module: {
-    rules: [
-      test: /\.md$/,
-      use: [
-        {
-          loader: 'vue-loader'
-        },
-        {
-          loader: 'vuedown/loader'
-        }
-      ]
-    ]
-  }
-}
-```
-
-Or in `{vue,poi}.config.js`:
-
-```js
-module.exports = {
-  chainWebpack(config) {
-    config.module
-      .rule('vuedown')
-      .test(/\.md$/)
-      .use('vue-loader')
-      .loader('vue-loader')
-      .end()
-      .use('vuedown-loader')
-      .loader('vuedown/loader')
-  }
-}
-```
-
-### Parcel
-
-TODO
 
 ## API
 
