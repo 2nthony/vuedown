@@ -127,6 +127,12 @@ Convert `<a>` to `<router-link>` but external link will always be `<a target="_b
 
 Wrap the HTML in an element.
 
+#### `options.extendMarkedRenderer`
+
+- Type: `(renderer: marked.Renderer) => void`
+
+You can modify the [marked renderer](https://marked.js.org/#/USING_PRO.md#renderer) we use.
+
 ### `vuedown.marked: marked`
 
 [marked](https://marked.js.org)
