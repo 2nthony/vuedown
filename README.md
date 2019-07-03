@@ -4,13 +4,17 @@
 
 Please consider starring the project to show your ❤️ and support.
 
-**You can use the [vuedown-loader](https://github.com/evillt/vuedown-loader) for webpack loader**
+> **You can use the [vuedown-loader](https://github.com/evillt/vuedown-loader) for webpack loader**
 
 [![NPM version](https://badgen.net/npm/v/vuedown?icon=npm)](https://npmjs.com/package/vuedown)
 [![NPM download](https://badgen.net/npm/dm/vuedown?icon=npm)](https://npmjs.com/package/vuedown)
 [![CircleCI](https://badgen.net/circleci/github/evillt/vuedown?icon=circleci)](https://circleci.com/gh/evillt/vuedown/tree/master)
 [![License](https://badgen.net/npm/license/vuedown)](./LICENSE)
 [![donate](https://badgen.net/badge/support%20me/donate/f2a)](https://donate.evila.me)
+
+vuedown is very similar to [vmark](https://github.com/egoist/vmark), but with different tooling based on.
+
+vuedown(8kb) is 4 times smaller than vmark(30kb), because vmark use [saber-markdown(fork from markdown-it)](https://github.com/saberland/saber/tree/master/packages/saber-markdown) while vuedown use [marked(forked)](./lib/markdown/marked.js) under the hood.
 
 ## Features
 
