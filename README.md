@@ -4,7 +4,8 @@
 
 Please consider starring the project to show your ❤️ and support.
 
-> **You can use the [vuedown-loader](https://github.com/evillt/vuedown-loader) for webpack loader**
+> **You can use the [@evillt/vuedown-loader](https://github.com/evillt/vuedown-loader) for webpack loader**  
+> **Parcel plugin is Work-In-Progress**
 
 [![NPM version](https://badgen.net/npm/v/vuedown?icon=npm)](https://npmjs.com/package/vuedown)
 [![NPM download](https://badgen.net/npm/dm/vuedown?icon=npm)](https://npmjs.com/package/vuedown)
