@@ -42,3 +42,17 @@ snapshot(
     wrapHTML: html => `<div class="wrapper">${html}</div>`
   }
 )
+
+snapshot(
+  'extend marked renderer',
+  `
+## Hi {name}!
+`,
+  {
+    extendMarkedRenderer: renderer => {
+      renderer.heading = text => {
+        return `<h1>${text.replace(/{name}/g, 'evillt')}</h1>`
+      }
+    }
+  }
+)
