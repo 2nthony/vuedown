@@ -134,6 +134,12 @@ Wrap the HTML in an element.
 
 You can modify the [marked renderer](https://marked.js.org/#/USING_PRO.md#renderer) we use.
 
+#### `options.imageLazyLoading`
+
+- Type: `boolean`
+
+Support chrome 75's native image lazy loading.
+
 ### `vuedown.marked: marked`
 
 [marked](https://marked.js.org)
