@@ -56,3 +56,11 @@ snapshot(
     }
   }
 )
+
+snapshot(
+  'image lazy loading',
+  `![electrocat](https://developer.github.com/assets/images/electrocat.png "github dev guides")`,
+  {
+    imageLazyLoading: true
+  }
+)
